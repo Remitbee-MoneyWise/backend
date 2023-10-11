@@ -18,7 +18,7 @@ export class ExchangerateService {
   remove(id: number) {
     return `This action removes a #${id} exchangerate`;
   }
-  bestRate() {
+  bestrate() {
     const rates = [
       {
         "name": "Sampath Bank Plc",
@@ -49,4 +49,5 @@ export class ExchangerateService {
     console.log("Rates", rates);
   
     return { data: rates };
+  }
   }
