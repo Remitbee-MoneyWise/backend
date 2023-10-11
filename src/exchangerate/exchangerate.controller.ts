@@ -34,6 +34,7 @@ export class ExchangerateController {
 
   @Get('best-rate')
   async bestRate(): Promise<{ data: any }> {
+    console.log("rates")
     const rates = [
       {
         "name": "Sampath Bank Plc",
