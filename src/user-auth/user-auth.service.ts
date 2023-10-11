@@ -16,8 +16,7 @@ export class UserAuthService {
       let existingUser = this.userModel.findOne({email:email}).exec();
     if(!existingUser){
       const hash = await bcrypt.hash(password, 10);
-      let data = await this.userModel.create({ email, password: hash });
-      console.log(existingUser)
+      await this.userModel.create({ email, password: hash });
       return { message: 'User registered successfully' };
     }
     } catch (error) {
