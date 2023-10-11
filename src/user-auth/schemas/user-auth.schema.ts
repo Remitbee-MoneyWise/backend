@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 @Schema({ timestamps: true })
 export class User {
 
-  @Prop({ unique: true }) // Add unique option here
+  @Prop()
   email: string;
 
   @Prop()
