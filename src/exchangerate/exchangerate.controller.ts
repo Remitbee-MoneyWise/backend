@@ -32,7 +32,7 @@ export class ExchangerateController {
     return this.exchangerateService.remove(+id);
   }
 
-  @Get()
+  @Get('best-rate')
   bestRate() {
     return this.exchangerateService.findAll();
   }
