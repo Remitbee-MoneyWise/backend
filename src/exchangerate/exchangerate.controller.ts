@@ -34,10 +34,37 @@ export class ExchangerateController {
 
   @Get('best-rate')
   async bestRate(): Promise<{ data: any }> {
-    console.log("rates")
-    const rates = [];
-
+    const rates = [
+      {
+        "name": "Sampath Bank Plc",
+        "rate": 15,
+        "location": [6.894923, 79.887876],
+        "score": 26.78
+      },
+      {
+        "name": "The Sovereign",
+        "rate": 25,
+        "location": [6.899408, 79.893693],
+        "score": 0.2
+      },
+      {
+        "name": "Zylan Luxury Villa",
+        "rate": 23,
+        "location": [6.910101, 79.894931],
+        "score": 0.19
+      },
+      {
+        "name": "Hotel Janaki",
+        "rate": 20,
+        "location": [6.888039, 79.887449],
+        "score": 0.16
+      }
+    ];
+  
+    console.log("Rates", rates);
+  
     return { data: rates };
   }
+  
 
 }
